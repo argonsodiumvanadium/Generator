@@ -5,8 +5,9 @@ if   [[ -z $1 || -z $2 ]]; then
 	exit
 fi
 
-if [[ $1 -eq "--list" || $1 -eq "-l" ]]; then
-	ls ~/.gen_templates/
+if [[ $1 == "--list" || $1 == "-l" ]]; then
+	ls -al ~/.gen_templates/
 else
 	cp ~/.gen_templates/$1 ./$2
+	echo -e "[\e[32mGEN\e[0m] $2"
 fi
