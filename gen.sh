@@ -12,4 +12,4 @@ else
 	echo -e "[\e[32mGEN\e[0m] $2"
 fi
 
-vim ./$2/
+vim $2
