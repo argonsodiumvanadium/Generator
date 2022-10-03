@@ -11,3 +11,5 @@ else
 	cp ~/.gen_templates/$1 ./$2
 	echo -e "[\e[32mGEN\e[0m] $2"
 fi
+
+vim ./$2/
