@@ -5,8 +5,8 @@ if   [[ -z $1 || -z $2 ]]
 	echo -e "usage : gen [format] [filename]"
 fi
 
-if [[ $1 -eq "--list" || $1 -eq "-l" ]]
+if [[ $1 -eq "--list" || $1 -eq "-l" ]]; then
 	ls ~/.gen_templates/
-else
+else; then
 	cp ~/.gen_templates/$1 ./$2
 fi
