@@ -8,7 +8,7 @@ fi
 if [[ $1 == "--list" || $1 == "-l" ]]; then
 	ls -al ~/.gen_templates/
 else
-	if [[ -d ./$2 ]];then
+	if [[ -f "./$2" ]]; then
 		echo -e "\e[31mfile exists\e[0m"
 		exit 1
 	fi
