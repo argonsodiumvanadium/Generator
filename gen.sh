@@ -8,6 +8,10 @@ fi
 if [[ $1 == "--list" || $1 == "-l" ]]; then
 	ls -al ~/.gen_templates/
 else
+	if [[ -d ./$2 ]];then
+		echo -e "\e[31mfile exists\e[0m"
+		exit 1
+	fi
 	cp ~/.gen_templates/$1 ./$2
 	echo -e "[\e[32mGEN\e[0m] $2"
 fi
